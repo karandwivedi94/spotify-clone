@@ -1,0 +1,222 @@
+.leftDisplay{
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 20px 15px; 
+    overflow: hidden; /*so that menu icons show if screen size reduces */
+    transition: all 0.3s ease;
+}
+
+.leftDisplay .logoContainer{
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftDisplay .logoContainer i{
+    font-size: 30px;
+}
+
+.leftDisplay .logoContainer i:nth-child(3){
+    font-size: 20px; 
+}
+
+.leftMenu .logoContainer h2{
+    font-size: 20px;
+}
+
+.searchBox{
+    width: 100%;
+    height: 45px;
+    background: rgba(98, 83, 83, 0);
+    position: relative;
+    margin-top: 20px;
+    color: #848484;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.searchBox input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 45px; 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.searchBox .searchIcon{
+    position: absolute;
+    color: #848484;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background: #555;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+
+}
+
+.MenuContainer{
+    margin: 15px 0;
+}
+
+.MenuContainer .title{
+    color: #848484;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.MenuContainer ul{
+    width: 100%;
+    padding: 0;
+}
+
+.MenuContainer ul li{
+    list-style: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+
+.MenuContainer ul li a{
+    text-decoration: none;
+    color: #848484;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+.MenuContainer ul li a i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.MenuContainer ul li:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 0px;
+    height: 100%;
+    background: #FCB61D;
+    border-radius: 5px;
+    left: -15px;
+}
+
+.MenuContainer ul li:hover::before,
+.MenuContainer ul li.active::before
+{
+    width: 5px;
+    transition: 0.3s;
+}
+
+.MenuContainer ul li:hover a,
+.MenuContainer ul li.active a{
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.playlistContainer{
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.playlistContainer .nameContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #848484;
+    margin-bottom: 10px;
+}
+
+.playlistContainer .nameContainer p{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.playlistContainer .nameContainer i{
+    cursor: pointer;
+    color: #f1f1f1;
+}
+
+.playlistContainer .playlistScroll{
+    height: 140px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.playlistContainer .playlistScroll .playList{
+    margin: 10px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #848484
+}
+
+.playlistContainer .playlistScroll .playList i{
+    font-size: 18px;
+}
+
+.playlistContainer .playlistScroll .playList .list{
+    margin-right: 15px;
+}
+
+.playlistContainer .playlistScroll .playList .list .trash {
+    margin-left: auto;
+}
+
+.playlistContainer .playlistScroll .playList p{
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+/* for any long playlist names, ellipsis will be used */
+
+
+@media screen and (max-width: 550px){
+    .leftDisplay{
+        width: 64px;
+        min-width: 64px;
+    }
+    .leftDisplay .searchBox{
+        display: none;
+    }
+    .leftDisplay .MenuContainer span{
+        display: none;
+    }
+    .leftDisplay .playlistContainer {
+        display: none;
+    }
+    .logoContainer h2 {
+        display: none;
+    }
+    .logoContainer .ellipsisHeader{
+        display:none;
+    }
+    .leftDisplay .MenuContainer{
+        font-size: 26px;
+        text-align: center;
+    }
+    .leftDisplay .MenuContainer ul li{
+        margin: 25px 5px;
+    }
+
+    .leftDisplay .logoContainer h2{
+        margin-left: 25px;
+    }
+}
