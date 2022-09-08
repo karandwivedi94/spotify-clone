@@ -16,12 +16,16 @@
     justify-content: space-between;
 }
 .leftDisplay .logoContainer i{
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .leftDisplay .logoContainer i:nth-child(3){
     font-size: 20px; 
 }
+
+
+
+
 
 .leftMenu .logoContainer h2{
     font-size: 20px;
@@ -218,5 +222,25 @@
 
     .leftDisplay .logoContainer h2{
         margin-left: 25px;
+    }
+
+    .MenuContainer ul li:nth-child(2) {
+        display: none
+    }
+    
+    .MenuContainer ul li:nth-child(3) {
+        display: none
+    }
+    
+    .MenuContainer ul li:nth-child(4) {
+        display: none
+    }
+    
+    .MenuContainer ul li:nth-child(5) {
+        display: none
+    }
+    
+    .MenuContainer ul li:nth-child(6) {
+        display: none
     }
 }

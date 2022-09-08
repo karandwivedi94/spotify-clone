@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Styles/MainContainer.css'
-import Artist from '../img/artist.jpeg'
+import Artist from '../img/karakus-background.png'
 import Check from '../img/check.png'
 import {FaEllipsisH, FaHeadphones, FaCheck} from 'react-icons/fa'
 
@@ -20,14 +20,14 @@ function Banner(){
                 <div className = "artist">
                     <div className="left">
                         <div className="name">
-                        <h2> K-Dot </h2>
+                        <h2> Songify </h2>
                         <img src = {Check}></img>
                     </div>
                     <p>
                         <i>
                             <FaHeadphones/>
                         </i>
-                        123,456,789 <span> Monthly listeners </span>
+                        New Music Weekly <span> </span>
                     </p>
                     </div>
                     <div className="right">

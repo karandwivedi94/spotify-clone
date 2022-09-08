@@ -7,7 +7,7 @@ import { RightDisplay } from './components/RightDisplay';
 function App() {
   return (
     <div className="App">
-      <LeftDisplay/>
+      <LeftDisplay />
       <MainDisplay />
       <RightDisplay /> 
 
